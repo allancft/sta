@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<configuracao>
+	<servidorftp>electra</servidorftp>
+	<usuarioftp>autovend</usuarioftp>
+	<senhaftp>3dxr43t</senhaftp>
+	<drivediretoriobase>/sta</drivediretoriobase>
+	<drivediretorioiis>\\titan\externas\</drivediretorioiis>
+	<urlsite>http://gaia/sta</urlsite>
+	<stringbanco>Provider=SQLOLEDB.1;User Id=ftpItambe;Pwd=ftpItambe;Data Source=ajax\ajax_dev;Initial Catalog=des_ftp_Itambe</stringbanco>
+</configuracao>

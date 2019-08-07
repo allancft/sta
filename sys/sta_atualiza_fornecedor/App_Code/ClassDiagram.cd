@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Font Name="Tahoma" Size="8.25" />
+  <Class Name="Fornecedor">
+    <Position X="3" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>App_Code\Fornecedor.cs</FileName>
+      <HashCode>AUAAKAAAICAAgAAAAAAQBAAAABgAAAAAAAAAYEEAAAE=</HashCode>
+    </TypeIdentifier>
+  </Class>
+</ClassDiagram>

@@ -1,0 +1,385 @@
+﻿/********************************
+e-Services - Grupo Multiservices
+Pagina: Geral
+Developer: Daniel M. Moreira (sanportnoy@gmail.com)
+Data:26/06/2007
+Alteraçao:29/06/2007
+*********************************/
+body
+{
+    padding: 0px;
+    margin: 0px;
+    background-color:#FFFFFF;
+    font: 0.8em Trebuchet MS, Arial, Helvetica, sans-serif;
+    color: #919191;
+}
+div, ul, h1, h2, h3, li, p, img, a
+{
+    margin: 0;
+    padding: 0;
+}
+A.externo {	
+padding-right: 17px;	
+background: url(http://loki/sta_atualiza_fornecedor/imagem/link_externo.gif) no-repeat right center
+}
+/***************************
+ loading do AJAX
+***************************/
+#loader{
+    float:right;
+	background-color: #f00;
+	color:#fff;
+    font-weight:bold;
+	display:none;
+	padding:3px;
+}
+/***********************************
+Paineis
+************************************/
+
+#Main
+{
+    margin:0;
+}
+#Topo
+{   
+    /*height:108px;*/
+    border:solid 1px #f2f2f2;
+}
+#Logomarca
+{
+    margin:0 0 0 5px;
+    float:left;
+}
+/******************
+navegador
+*******************/
+#NaveUser 
+{
+    margin:0 0 0 250px;
+    padding:5px 15px 0px 15px;
+    text-align:center;
+    height:79px;
+    /*border:solid 1px #ccc;*/
+    
+}
+#NaveUser h1
+{
+    font-family: "Trebuchet MS" ,Arial, Helvetica, sans-serif;
+    font-size: 240%;
+    font-weight: bolder;
+    color: #0193de;
+    margin:5px 0 0 0 ;
+    padding:0;
+}
+#NaveUser h2
+{
+    font-family: "Trebuchet MS" ,Arial, Helvetica, sans-serif;
+    font-size: 120%;
+    font-weight: bolder;
+    color: #a7a9aa;
+    margin:0 ;
+    padding:0;
+}
+#Nave
+{
+    margin:0 0 0 220px;
+    padding:5px 5px 5px 5px;
+    background-color:#f2f2f2;
+}
+#Nave a , #Nave a:link, #Nave a:visited, #Nave a:hover 
+{
+   font-weight:bolder;
+}
+#Container
+{
+    color: #333333;
+    margin:0 0 0 205px;
+    text-align:left;
+    border:solid 1px #f2f2f2;
+    border-bottom:0;
+    border-top:0;
+    margin-top:65px;
+    float:left;
+    
+}
+#ContainerFull
+{
+	color: #333333;
+    margin:5px 15px 15px 15px;   
+    text-align:left;
+    border:solid 1px #f2f2f2;
+    border-bottom:0;
+    border-top:0;
+    
+    
+    
+}
+#Left
+{
+    width: 200px;
+    color: #7F7F7F;
+    float: left;
+    padding:0 5px 5px 5px;
+}
+#Right
+{
+    float:right;
+    width:200px;
+    background-color:#f4f2f4;
+}
+#Rodape
+{
+clear:both;
+}
+/*************************
+Box
+**************************/
+.Box
+{
+    padding:10px;
+    margin:3px;
+  
+}
+.Spacer
+{
+    padding:10px;
+    margin:3px;
+}
+/*Cor para boxes*/
+.ColorBranco
+{
+    background-color:#fff;
+}
+.ColorCinzaClaro
+{
+    background-color:#f4f2f4;
+}
+.ColorCinzaEscuro
+{
+    background-color:#dbd8db;
+}
+.ColorVermelho
+{
+    background-color:#fad4d8;
+}
+/*************************
+Titulos
+**************************/
+/*Container*/
+h1
+{
+    font-family: "Trebuchet MS" ,Arial, Helvetica, sans-serif;
+    font-size: 150%;
+    font-weight: bold;
+    color: #58bce2;
+    margin: 10px 0 10px 0 ;
+}
+h2
+{
+    font-family: "Trebuchet MS" ,Arial, Helvetica, sans-serif;
+    font-size: 125%;
+    font-weight: bold;
+    color: #ff4948;
+    margin:5px 0 5px 0 ;
+}
+h3
+{
+    font: 16px "Trebuchet MS" ,Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    color: #7f7f7f;
+    margin:3px 0 3px 0 ;
+    font-size: 110%;
+
+}
+.FieldSetBorder
+{
+/*
+    margin:5px;*/
+    border:solid 1px #ccc;
+    float:left;
+ }
+
+.Legenda
+{
+    font: 16px "Trebuchet MS" ,Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    color: #7f7f7f;
+    margin:5px 0 5px 5px ;
+    
+}
+/******************
+Alinhamentos
+*******************/
+.AlignJustify
+{
+ text-align:justify;   
+ }
+ .AlignLeft
+{
+ text-align:left;   
+ }
+ .AlignRight
+{
+ text-align:right;   
+ }
+ .AlignCenter
+{
+ text-align:center;   
+ }
+ /******************
+Fontes e textos HTML
+*******************/
+.TextoNegrito
+{
+    font-weight:bold;
+}
+.TextoItalico
+{
+    font-style:italic;
+}
+.TextoSublinhado
+{
+    text-decoration:underline;
+}
+ /******************
+Cor de Fontes e textos HTML
+*******************/
+.FonteAzulClaro
+{
+    color:#63adec;
+}
+.FonteAzulEscuro
+{
+    color:#0660ad;
+}
+.FonteVermelho
+{
+    color:#f00;
+}
+.FonteVerdeClaro
+{
+    color:#41d009;
+}
+.FonteVerdeEscuro
+{
+    color:#226807;
+}
+.FontePreto
+{
+    color:#050505;
+}
+.Fontelaranja
+{
+    color:#fdb405;
+}
+
+/******************
+Componentes HTML
+*******************/
+INPUT, button 
+{
+    margin:2px;
+    padding:1px 2px 1px 2px;
+}
+.TextoCadastros
+{
+    margin-left:25px;
+}
+
+#BoxAutoCompletar
+{
+	background-color:#fff;
+    color:#000;
+    border: solid 1px #ccc;
+    width:511px;
+    display:none;	
+}
+	
+.TituloAuto
+{
+	font-weight:bolder;
+	color:Red;
+}
+.BoxAutoCompletarLink
+{
+	background-color:#fff;
+    color:#000;
+    border: solid 1px #ccc;
+    cursor:pointer;
+    width:511px;
+    
+}
+#Painel_informacoes
+{
+	margin:0;
+	display : none;
+	
+}
+.label
+{
+background-color:#80ec82;
+font-weight:bolder;
+
+
+}
+.topo-dir {
+background:url(http://loki/sta_atualiza_fornecedor/imagens/topo-dir.jpg) 100% 0 no-repeat; 
+/*width:25em;*/
+}
+
+.baixo-esq {
+background: url(http://loki/sta_atualiza_fornecedor/imagens/baixo-esq.jpg) 0 100% no-repeat;
+}
+
+.baixo-dir {
+background: url(http://loki/sta_atualiza_fornecedor/imagens/baixo-dir.jpg) 100% 100% no-repeat; 
+padding:0 6px 7px 0;
+}
+
+#Container
+{
+float:left;
+margin:10px; 
+
+}
+/*************************************
+sombra de efeito dos boxes
+*************************************/
+.myBox
+{
+	margin:0 40% 0 0 ;
+	margin-right:10%;
+
+}
+
+.boxAmarelo
+{
+	background-color:#80ec82;
+	color:#000;
+	font-weight:bold;
+	padding:5px;
+	border:solid 1px #000;
+
+}
+
+/*Texto para boxes*/
+.BoxTexto
+{
+    margin:5px;
+	padding:5px;
+	font-family: Verdana, tahoma, Arial, Helvetica, sans-serif;
+	font-size: 85%;
+	padding:5px 5px 5px 20px ;
+	margin:3px;
+}
+
+#Resultado
+{
+	display:none;
+}
+
+#hideDIv
+{
+	display:none;
+}

@@ -1,0 +1,67 @@
+﻿@model FileInfo[]
+@{
+    ViewBag.Title = "Exibir";
+}
+<style>
+    .container
+    {
+        width: 100%;
+    }
+    #listaArquivos
+    {
+        width: 20%;
+        float: left;
+    }
+    #arquivoLog
+    {
+        width: 78%;
+        float: right;
+    }
+</style>
+<script type="text/javascript">
+    function atualizarlog(nomeArquivo) {
+        $('#arquivoLog').html("");
+        $.ajax({
+            type: 'GET',
+            url: '/Log/ExibirArquivoLog?nomeArquivo=' + nomeArquivo,
+            dataType: 'html',
+            cache: false,
+            async: true,
+            success: function (data) {
+                $('#arquivoLog').html(data);
+            }
+        });
+    }
+    $(document).ready(function () {
+        //setInterval(atualizarlog, 30000);
+        $(".loading").ajaxStart(function () {
+            $(this).fadeIn(300);
+        });
+        $(".loading").ajaxStop(function () {
+            $(this).fadeOut(200);
+        });
+    }); 
+    
+</script>
+@Html.Partial("_MenuLog")
+
+@if (Model.Count() <= 0)
+{
+    <center>
+        Registros de log não encontrados
+    </center>
+}
+else
+{
+    <div id="listaArquivos" class="panel">
+        @foreach (FileInfo item in Model.OrderByDescending(m => m.Name))
+        {
+            <a href="#" onclick="atualizarlog('@item.Name');">@item.Name</a>
+        }
+    </div>
+    <div id="arquivoLog" class="panel">
+        @{
+        Html.RenderPartial("ExibirArquivoLog", new string[] { });
+        }
+    </div>
+}

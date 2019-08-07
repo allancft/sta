@@ -1,0 +1,44 @@
+﻿<PUBLIC:COMPONENT>
+<PUBLIC:PROPERTY name="null"/>
+<SCRIPT>
+/*----------------------
+COLOCAR NO CAMPO OBRIGATORIO A PROPRIEDADE 
+null="false"
+PARA O COMPONENTE VERIFICAR SE FOI OU NAO PREENCHIDO.
+----------------------*/
+attachEvent("onclick", atEvForm);
+
+
+function atEvForm(){		
+	ob = window.document.forms[0];
+	ob.attachEvent("onsubmit", chNull);
+}
+
+function chNull()
+{
+	ob = window.document.forms[0];
+	var msg = "";
+	var nFaltam = 0;
+	var isNull;
+	
+	for(x=0;x< ob.elements.length;x++){	
+		isNull = eval(ob.elements[x].getAttribute("null"));
+		ob.elements[x].className = "inp";
+		if(isNull != null){
+			if(!isNull && ob.elements[x].value == ""){
+				ob.elements[x].className = "inpErr";
+				nFaltam++;
+			}
+		}
+	}
+	if(nFaltam>0){		
+		alert("Os campos com * são Obrigatórios");
+		ob.detachEvent("onsubmit", chNull);
+		return false;
+	}else{
+		ob.detachEvent("onsubmit", chNull);
+		return true;
+	}
+}
+</SCRIPT>
+</PUBLIC:COMPONENT>

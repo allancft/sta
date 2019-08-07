@@ -1,0 +1,89 @@
+﻿@using System.Web.UI.WebControls
+@model STA.MODEL.Models.TDEPARA
+@using (Html.BeginForm("Salvar", "DePara"))
+{
+    @Html.Partial("_MenuDeParaEditar")
+    <div class="panel panel-default">
+        <div class="panel-body">
+            <div class="form-group largura-50">
+                @Html.LabelFor(m => m.ATXT_DESC, "Descrição resumida")
+                @Html.TextBoxFor(m => m.ATXT_DESC, new { @class = "form-control" })
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(m => m.ABOL_ATIVO, "Ativo?")
+                @Html.DropDownListFor(m => m.ABOL_ATIVO, (IEnumerable<SelectListItem>)ViewBag.SimNao, null, new { @class = "form-control" })
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(m => m.ABOL_EXCLUIR_ORIGEM, "Excluir após copiar?")
+                @Html.DropDownListFor(m => m.ABOL_EXCLUIR_ORIGEM, (IEnumerable<SelectListItem>)ViewBag.SimNao, null, new { @class = "form-control" })
+            </div>
+            <br />
+            <br />
+            <fieldset>
+                <legend>Informações de origem</legend>
+                @Html.HiddenFor(m => m.ANUM_DEPARA, new { @hidden = "true", @class = "form-control" })
+                <div class="form-group largura-100">
+                    @Html.LabelFor(m => m.ANOM_ORIGEM, "Caminho de Origem")
+                    @Html.TextBoxFor(m => m.ANOM_ORIGEM, new { @class = "form-control" })
+                </div>
+                <div class="form-group">
+                    @Html.LabelFor(m => m.ATXT_PROTOCOLO_ORIGEM, "Protocolo de origem")
+                    @Html.DropDownListFor(m => m.ATXT_PROTOCOLO_ORIGEM, (IEnumerable<SelectListItem>)ViewBag.Protocolo, null, new { @class = "form-control" })
+                </div>
+                <div class="form-group">
+                    @Html.LabelFor(m => m.ATXT_SERVIDOR_ORIGEM, "Servidor de origem")
+                    @Html.TextBoxFor(m => m.ATXT_SERVIDOR_ORIGEM, new { @class = "form-control" })
+                </div>
+                <div class="form-group">
+                    @Html.LabelFor(m => m.ATXT_USUARIO_ORIGEM, "Usuário origem")
+                    @Html.TextBoxFor(m => m.ATXT_USUARIO_ORIGEM, new { @class = "form-control" })
+                </div>
+                <div class="form-group">
+                    @Html.LabelFor(m => m.ATXT_SENHA_ORIGEM, "Senha origem")
+                    @Html.TextBoxFor(m => m.ATXT_SENHA_ORIGEM, new { @class = "form-control" })
+                </div>
+                <div class="form-group">
+                    @Html.LabelFor(m => m.ABOL_USARSSL_DESTINO, "Usar SSL na origem")
+                    @Html.CheckBoxFor(m => m.ABOL_USARSSL_ORIGEM, new { @class = "form-control" })
+                </div>
+                <div class="form-group">
+                    @Html.LabelFor(m => m.ATXT_PORTA_ORIGEM, "Porta de origem")
+                    @Html.TextBoxFor(m => m.ATXT_PORTA_ORIGEM, new { @class = "form-control" })
+                </div>
+            </fieldset>
+            <br />
+            <fieldset>
+                <legend>Informações de destino</legend>
+                <div class="form-group largura-100">
+                    @Html.LabelFor(m => m.ANOM_DESTINO, "Caminho de Destino")
+                    @Html.TextBoxFor(m => m.ANOM_DESTINO, new { @class = "form-control" })
+                </div>
+                <div class="form-group">
+                    @Html.LabelFor(m => m.ATXT_PROTOCOLO_DESTINO, "Protocolo de destino")
+                    @Html.DropDownListFor(m => m.ATXT_PROTOCOLO_DESTINO, (IEnumerable<SelectListItem>)ViewBag.Protocolo, null, new { @class = "form-control" })
+                </div>
+                <div class="form-group">
+                    @Html.LabelFor(m => m.ATXT_SERVIDOR_DESTINO, "Servidor de destino")
+                    @Html.TextBoxFor(m => m.ATXT_SERVIDOR_DESTINO, new { @class = "form-control" })
+                </div>
+                <div class="form-group">
+                    @Html.LabelFor(m => m.ATXT_USUARIO_DESTINO, "Usuário destino")
+                    @Html.TextBoxFor(m => m.ATXT_USUARIO_DESTINO, new { @class = "form-control" })
+                </div>
+                <div class="form-group">
+                    @Html.LabelFor(m => m.ATXT_SENHA_DESTINO, "Senha destino")
+                    @Html.TextBoxFor(m => m.ATXT_SENHA_DESTINO, new { @class = "form-control" })
+                </div>
+                <div class="form-group">
+                    @Html.LabelFor(m => m.ABOL_USARSSL_DESTINO, "Usar SSL no destino")
+                    @Html.CheckBoxFor(m => m.ABOL_USARSSL_DESTINO, new { @class = "form-control" })
+                </div>
+                <div class="form-group">
+                    @Html.LabelFor(m => m.ATXT_PORTA_DESTINO, "Porta de destino")
+                    @Html.TextBoxFor(m => m.ATXT_PORTA_DESTINO, new { @class = "form-control" })
+                </div>
+            </fieldset>
+        </div>
+    </div>
+
+}

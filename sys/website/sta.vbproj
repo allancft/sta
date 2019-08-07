@@ -1,0 +1,565 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{CFD45149-2968-46E7-A8A0-77AFB8B67BAD}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{F184B08F-C81C-45F6-A57F-5ABD9991F28F}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <RootNamespace>sta</RootNamespace>
+    <AssemblyName>sta</AssemblyName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\</OutputPath>
+    <DocumentationFile>sta.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DocumentationFile>sta.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="aimCriptografia, Version=1.0.1676.30255, Culture=neutral">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\servico\DLL\aimCriptografia.dll</HintPath>
+    </Reference>
+    <Reference Include="objCriptografia, Version=1.0.1742.20883, Culture=neutral">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\servico\DLL\objCriptografia.dll</HintPath>
+    </Reference>
+    <Reference Include="objUpload, Version=1.0.1794.16606, Culture=neutral">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\servico\DLL\objUpload.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.Mobile" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Collections.Specialized" />
+    <Import Include="System.Configuration" />
+    <Import Include="System.Text" />
+    <Import Include="System.Text.RegularExpressions" />
+    <Import Include="System.Web" />
+    <Import Include="System.Web.Caching" />
+    <Import Include="System.Web.SessionState" />
+    <Import Include="System.Web.Security" />
+    <Import Include="System.Web.Profile" />
+    <Import Include="System.Web.UI" />
+    <Import Include="System.Web.UI.WebControls" />
+    <Import Include="System.Web.UI.WebControls.WebParts" />
+    <Import Include="System.Web.UI.HtmlControls" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="chave.aspx" />
+    <Content Include="Default.aspx" />
+    <Content Include="Global.asax" />
+    <Content Include="images\addArquiv.gif" />
+    <Content Include="images\addMail.gif" />
+    <Content Include="images\ajuda.gif" />
+    <Content Include="images\Backlogin.jpg" />
+    <Content Include="images\bkg.gif" />
+    <Content Include="images\btn_conectar.gif" />
+    <Content Include="images\cancelar.gif" />
+    <Content Include="images\chave.gif" />
+    <Content Include="images\confirmar.gif" />
+    <Content Include="images\envioexterno.gif" />
+    <Content Include="images\enviointerno.gif" />
+    <Content Include="images\exclaim.gif" />
+    <Content Include="images\layout01.gif" />
+    <Content Include="images\layout02.gif" />
+    <Content Include="images\layout03.gif" />
+    <Content Include="images\layout04.gif" />
+    <Content Include="images\layout05.gif" />
+    <Content Include="images\layout06.gif" />
+    <Content Include="images\layout07.gif" />
+    <Content Include="images\layout08.gif" />
+    <Content Include="images\lixeira.gif" />
+    <Content Include="images\login_interno.gif" />
+    <Content Include="login.aspx" />
+    <Content Include="pages\ad.aspx" />
+    <Content Include="pages\cadfornecedor.aspx" />
+    <Content Include="pages\common\htc\mask.htc" />
+    <Content Include="pages\common\htc\null.htc" />
+    <Content Include="pages\common\scripts\funcoes.js" />
+    <Content Include="pages\common\scripts\mascara.js" />
+    <Content Include="pages\common\scripts\verdt.js" />
+    <Content Include="pages\common\scripts\verifica_data.js" />
+    <Content Include="pages\common\styles\style.css" />
+    <Content Include="pages\common\webcontrols\wbcCabecalho.ascx" />
+    <Content Include="pages\common\webcontrols\wbcCabecalhoPopup.ascx" />
+    <Content Include="pages\common\webcontrols\wbcRodape.ascx" />
+    <Content Include="pages\common\webcontrols\wbcRodapePopup.ascx" />
+    <Content Include="pages\confadmin.aspx" />
+    <Content Include="pages\confaplicativos.aspx" />
+    <Content Include="pages\confcompanhias.aspx" />
+    <Content Include="pages\confextensoes.aspx" />
+    <Content Include="pages\confparametros.aspx" />
+    <Content Include="pages\consultasexternas.aspx" />
+    <Content Include="pages\consultasinternas.aspx" />
+    <Content Include="pages\default.aspx" />
+    <Content Include="pages\htmacessonegado.htm" />
+    <Content Include="pages\htmvazio.htm" />
+    <Content Include="pages\images\addArquiv.gif" />
+    <Content Include="pages\images\addMail.gif" />
+    <Content Include="pages\images\ajuda.gif" />
+    <Content Include="pages\images\Backlogin.jpg" />
+    <Content Include="pages\images\bkg.gif" />
+    <Content Include="pages\images\btn_conectar.gif" />
+    <Content Include="pages\images\cancelar.gif" />
+    <Content Include="pages\images\chave.gif" />
+    <Content Include="pages\images\confirmar.gif" />
+    <Content Include="pages\images\envioexterno.gif" />
+    <Content Include="pages\images\enviointerno.gif" />
+    <Content Include="pages\images\exclaim.gif" />
+    <Content Include="pages\images\layout01.gif" />
+    <Content Include="pages\images\layout02.gif" />
+    <Content Include="pages\images\layout03.gif" />
+    <Content Include="pages\images\layout04.gif" />
+    <Content Include="pages\images\layout05.gif" />
+    <Content Include="pages\images\layout06.gif" />
+    <Content Include="pages\images\layout07.gif" />
+    <Content Include="pages\images\layout08.gif" />
+    <Content Include="pages\images\lixeira.gif" />
+    <Content Include="pages\images\login_interno.gif" />
+    <Content Include="pages\logoff.aspx" />
+    <Content Include="pages\popaplicativo.aspx" />
+    <Content Include="pages\popcalendario.aspx" />
+    <Content Include="pages\popcompanhia.aspx" />
+    <Content Include="pages\popconsarquivosext.aspx" />
+    <Content Include="pages\popconsarquivosint.aspx" />
+    <Content Include="pages\popdestinos.aspx" />
+    <Content Include="pages\popfornconsulta.aspx" />
+    <Content Include="pages\popfornecedor.aspx" />
+    <Content Include="pages\popupload.aspx" />
+    <Content Include="pages\usudownload.aspx" />
+    <Content Include="pages\usuupload.aspx" />
+    <Content Include="senhaperdida.aspx" />
+    <Content Include="js\funcoes.js" />
+    <Content Include="js\mascara.js" />
+    <Content Include="css\style.css" />
+    <Content Include="js\verdt.js" />
+    <Content Include="js\verifica_data.js" />
+    <Content Include="trocasenha.aspx" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="chave.aspx.designer.vb">
+      <DependentUpon>chave.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="chave.aspx.vb">
+      <DependentUpon>chave.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="classes\clsADSI.vb" />
+    <Compile Include="classes\clsAplicativo.vb" />
+    <Compile Include="classes\clsArquivo.vb" />
+    <Compile Include="classes\clsCompanhia.vb" />
+    <Compile Include="classes\clsConfiguracao.vb" />
+    <Compile Include="classes\clsConsulta.vb" />
+    <Compile Include="classes\clsDataUtil.vb" />
+    <Compile Include="classes\clsDB.vb" />
+    <Compile Include="classes\clsEmail.vb" />
+    <Compile Include="classes\clsEnvio.vb" />
+    <Compile Include="classes\clsFornecedor.vb" />
+    <Compile Include="classes\clsLayoutBase.vb">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="classes\clsLayoutPopup.vb">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="classes\clsScript.vb" />
+    <Compile Include="classes\clsUtil.vb" />
+    <Compile Include="Default.aspx.vb">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Global.asax.vb">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="login.aspx.designer.vb">
+      <DependentUpon>login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="login.aspx.vb">
+      <DependentUpon>login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pages\ad.aspx.designer.vb">
+      <DependentUpon>ad.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pages\ad.aspx.vb">
+      <DependentUpon>ad.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pages\cadfornecedor.aspx.designer.vb">
+      <DependentUpon>cadfornecedor.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pages\cadfornecedor.aspx.vb">
+      <DependentUpon>cadfornecedor.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pages\common\webcontrols\wbcCabecalho.ascx.designer.vb">
+      <DependentUpon>wbcCabecalho.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="pages\common\webcontrols\wbcCabecalho.ascx.vb">
+      <DependentUpon>wbcCabecalho.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pages\common\webcontrols\wbcCabecalhoPopup.ascx.designer.vb">
+      <DependentUpon>wbcCabecalhoPopup.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="pages\common\webcontrols\wbcCabecalhoPopup.ascx.vb">
+      <DependentUpon>wbcCabecalhoPopup.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pages\common\webcontrols\wbcRodape.ascx.designer.vb">
+      <DependentUpon>wbcRodape.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="pages\common\webcontrols\wbcRodape.ascx.vb">
+      <DependentUpon>wbcRodape.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pages\common\webcontrols\wbcRodapePopup.ascx.designer.vb">
+      <DependentUpon>wbcRodapePopup.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="pages\common\webcontrols\wbcRodapePopup.ascx.vb">
+      <DependentUpon>wbcRodapePopup.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pages\confadmin.aspx.designer.vb">
+      <DependentUpon>confadmin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pages\confadmin.aspx.vb">
+      <DependentUpon>confadmin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pages\confaplicativos.aspx.designer.vb">
+      <DependentUpon>confaplicativos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pages\confaplicativos.aspx.vb">
+      <DependentUpon>confaplicativos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pages\confcompanhias.aspx.designer.vb">
+      <DependentUpon>confcompanhias.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pages\confcompanhias.aspx.vb">
+      <DependentUpon>confcompanhias.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pages\confextensoes.aspx.designer.vb">
+      <DependentUpon>confextensoes.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pages\confextensoes.aspx.vb">
+      <DependentUpon>confextensoes.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pages\confparametros.aspx.designer.vb">
+      <DependentUpon>confparametros.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pages\confparametros.aspx.vb">
+      <DependentUpon>confparametros.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pages\consultasexternas.aspx.designer.vb">
+      <DependentUpon>consultasexternas.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pages\consultasexternas.aspx.vb">
+      <DependentUpon>consultasexternas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pages\consultasinternas.aspx.designer.vb">
+      <DependentUpon>consultasinternas.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pages\consultasinternas.aspx.vb">
+      <DependentUpon>consultasinternas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pages\default.aspx.designer.vb">
+      <DependentUpon>default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pages\default.aspx.vb">
+      <DependentUpon>default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pages\logoff.aspx.designer.vb">
+      <DependentUpon>logoff.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pages\logoff.aspx.vb">
+      <DependentUpon>logoff.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pages\popaplicativo.aspx.designer.vb">
+      <DependentUpon>popaplicativo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pages\popaplicativo.aspx.vb">
+      <DependentUpon>popaplicativo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pages\popcalendario.aspx.designer.vb">
+      <DependentUpon>popcalendario.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pages\popcalendario.aspx.vb">
+      <DependentUpon>popcalendario.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pages\popcompanhia.aspx.designer.vb">
+      <DependentUpon>popcompanhia.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pages\popcompanhia.aspx.vb">
+      <DependentUpon>popcompanhia.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pages\popconsarquivosext.aspx.designer.vb">
+      <DependentUpon>popconsarquivosext.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pages\popconsarquivosext.aspx.vb">
+      <DependentUpon>popconsarquivosext.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pages\popconsarquivosint.aspx.designer.vb">
+      <DependentUpon>popconsarquivosint.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pages\popconsarquivosint.aspx.vb">
+      <DependentUpon>popconsarquivosint.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pages\popdestinos.aspx.designer.vb">
+      <DependentUpon>popdestinos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pages\popdestinos.aspx.vb">
+      <DependentUpon>popdestinos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pages\popfornconsulta.aspx.designer.vb">
+      <DependentUpon>popfornconsulta.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pages\popfornconsulta.aspx.vb">
+      <DependentUpon>popfornconsulta.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pages\popfornecedor.aspx.designer.vb">
+      <DependentUpon>popfornecedor.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pages\popfornecedor.aspx.vb">
+      <DependentUpon>popfornecedor.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pages\popupload.aspx.designer.vb">
+      <DependentUpon>popupload.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pages\popupload.aspx.vb">
+      <DependentUpon>popupload.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pages\usudownload.aspx.designer.vb">
+      <DependentUpon>usudownload.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pages\usudownload.aspx.vb">
+      <DependentUpon>usudownload.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pages\usuupload.aspx.designer.vb">
+      <DependentUpon>usuupload.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pages\usuupload.aspx.vb">
+      <DependentUpon>usuupload.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="senhaperdida.aspx.designer.vb">
+      <DependentUpon>senhaperdida.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="senhaperdida.aspx.vb">
+      <DependentUpon>senhaperdida.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="trocasenha.aspx.designer.vb">
+      <DependentUpon>trocasenha.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="trocasenha.aspx.vb">
+      <DependentUpon>trocasenha.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="chave.aspx.resx">
+      <DependentUpon>chave.aspx.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="default.aspx.resx">
+      <DependentUpon>Default.aspx.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Global.asax.resx">
+      <DependentUpon>Global.asax.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="login.aspx.resx">
+      <DependentUpon>login.aspx.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="pages\ad.aspx.resx">
+      <DependentUpon>ad.aspx.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="pages\cadfornecedor.aspx.resx">
+      <DependentUpon>cadfornecedor.aspx.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="pages\common\webcontrols\wbcCabecalho.ascx.resx">
+      <DependentUpon>wbcCabecalho.ascx.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="pages\common\webcontrols\wbcCabecalhoPopup.ascx.resx">
+      <DependentUpon>wbcCabecalhoPopup.ascx.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="pages\common\webcontrols\wbcRodape.ascx.resx">
+      <DependentUpon>wbcRodape.ascx.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="pages\common\webcontrols\wbcRodapePopup.ascx.resx">
+      <DependentUpon>wbcRodapePopup.ascx.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="pages\confadmin.aspx.resx">
+      <DependentUpon>confadmin.aspx.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="pages\confaplicativos.aspx.resx">
+      <DependentUpon>confaplicativos.aspx.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="pages\confcompanhias.aspx.resx">
+      <DependentUpon>confcompanhias.aspx.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="pages\confextensoes.aspx.resx">
+      <DependentUpon>confextensoes.aspx.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="pages\confparametros.aspx.resx">
+      <DependentUpon>confparametros.aspx.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="pages\consultasexternas.aspx.resx">
+      <DependentUpon>consultasexternas.aspx.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="pages\consultasinternas.aspx.resx">
+      <DependentUpon>consultasinternas.aspx.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="pages\default.aspx.resx">
+      <DependentUpon>default.aspx.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="pages\logoff.aspx.resx">
+      <DependentUpon>logoff.aspx.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="pages\popaplicativo.aspx.resx">
+      <DependentUpon>popaplicativo.aspx.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="pages\popcalendario.aspx.resx">
+      <DependentUpon>popcalendario.aspx.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="pages\popcompanhia.aspx.resx">
+      <DependentUpon>popcompanhia.aspx.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="pages\popconsarquivosext.aspx.resx">
+      <DependentUpon>popconsarquivosext.aspx.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="pages\popconsarquivosint.aspx.resx">
+      <DependentUpon>popconsarquivosint.aspx.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="pages\popdestinos.aspx.resx">
+      <DependentUpon>popdestinos.aspx.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="pages\popfornconsulta.aspx.resx">
+      <DependentUpon>popfornconsulta.aspx.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="pages\popfornecedor.aspx.resx">
+      <DependentUpon>popfornecedor.aspx.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="pages\popupload.aspx.resx">
+      <DependentUpon>popupload.aspx.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="pages\usudownload.aspx.resx">
+      <DependentUpon>usudownload.aspx.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="pages\usuupload.aspx.resx">
+      <DependentUpon>usuupload.aspx.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="senhaperdida.aspx.resx">
+      <DependentUpon>senhaperdida.aspx.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="trocasenha.aspx.resx">
+      <DependentUpon>trocasenha.aspx.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="My Project\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v8.0\WebApplications\Microsoft.WebApplication.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>2388</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

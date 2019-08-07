@@ -1,0 +1,47 @@
+﻿@using GridMvc.Html
+@using GridMvc.Filtering
+@using GridMvc.Html
+@using GridMvc.Sorting
+@model List<STA.MODEL.Models.TDEPARA>
+@Html.Partial("_GridMvc")
+@Html.Partial("_MenuInicial")
+<style>
+    .container
+    {
+        width: 100%;
+    }
+</style>
+<div style="width: 100%;">
+    @Html.Grid(Model).Columns(columns =>
+                    {
+                        columns.Add(c => c.ANUM_DEPARA)
+                            .Titled("ID");
+                        columns.Add()
+                            .Titled("ATIVO")
+                            .RenderValueAs(c => c.ABOL_ATIVO == true ? "SIM" : "NÃO").Filterable(true);
+                        columns.Add(c => c.ANOM_ORIGEM)
+                            .Titled("ORIGEM")
+                            .Filterable(true);
+                        columns.Add(c => c.ATXT_USUARIO_ORIGEM)
+                            .Titled("USUÁRIO ORIGEM")
+                            .Filterable(true);
+                        columns.Add(c => c.ANOM_DESTINO)
+                            .Titled("DESTINO")
+                            .Filterable(true);
+                        columns.Add(c => c.ATXT_USUARIO_DESTINO)
+                            .Titled("USUARIO DESTINO")
+                            .Filterable(true);
+                        columns.Add().Titled("Editar")
+                            .Encoded(false)
+                            .Sanitized(false)
+                            .SetWidth(60)
+                        .Css("align-center")
+                        .RenderValueAs(c =>@<center><a href="~/DePara/Editar/@c.ANUM_DEPARA"><b>Editar</b></a></center>);
+                        columns.Add().Titled("Excluir")
+                            .Encoded(false)
+                            .Sanitized(false)
+                            .SetWidth(60)
+                            .Css("align-center")
+                            .RenderValueAs(c =>@<center><a href="~/DePara/Excluir/@c.ANUM_DEPARA"><b>Excluir</b></a></center>);
+                    }).WithPaging(20).Sortable(true).Filterable().WithMultipleFilters().SetLanguage("pt-br")
+</div>

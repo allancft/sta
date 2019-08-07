@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual Studio 2005
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "D:\...\sta_atualiza_fornecedor\", "..\sta_atualiza_fornecedor\", "{898DFFED-2EB2-45F1-B0A2-036BB82E0A9B}"
+	ProjectSection(WebsiteProperties) = preProject
+		Debug.AspNetCompiler.VirtualPath = "/sta_atualiza_fornecedor"
+		Debug.AspNetCompiler.PhysicalPath = "..\sta_atualiza_fornecedor\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\sta_atualiza_fornecedor\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/sta_atualiza_fornecedor"
+		Release.AspNetCompiler.PhysicalPath = "..\sta_atualiza_fornecedor\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\sta_atualiza_fornecedor\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "4525"
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|.NET = Debug|.NET
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{898DFFED-2EB2-45F1-B0A2-036BB82E0A9B}.Debug|.NET.ActiveCfg = Debug|.NET
+		{898DFFED-2EB2-45F1-B0A2-036BB82E0A9B}.Debug|.NET.Build.0 = Debug|.NET
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

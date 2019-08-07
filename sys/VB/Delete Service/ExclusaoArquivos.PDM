@@ -1,0 +1,90 @@
+[Root]
+Most Recent Package=STA - Exclusão Automática de Arquivos
+
+
+[Package|STA - Exclusão Automática de Arquivos|Root]
+SubWizProgID=PDWizard.SetupPkgSubWiz
+BuildFolder=C:\Documents and Settings\xrjsanto\Desktop\ExclusaoArquivos\Package
+
+[Package|STA - Exclusão Automática de Arquivos|Configure DAO ISAMs]
+Applicable=No
+
+[Package|STA - Exclusão Automática de Arquivos|Configure DAO ODBC]
+JetWorkspace=
+ODBCDirect=
+
+[Package|STA - Exclusão Automática de Arquivos|Files Found]
+
+[Package|STA - Exclusão Automática de Arquivos|Files Released]
+
+[Package|STA - Exclusão Automática de Arquivos|Missing Dependency Information]
+C:\WINDOWS\system32\ntsvc.ocx=
+C:\WINDOWS\system32\msxml2.dll=
+
+[Package|STA - Exclusão Automática de Arquivos|Out-of-Date Dependency Information]
+C:\WINDOWS\system32\scrrun.dll=
+
+[Package|STA - Exclusão Automática de Arquivos|Files Added]
+
+[Package|STA - Exclusão Automática de Arquivos|Files Removed]
+c:\windows\system32\ntsvc.ocx=
+
+[Package|STA - Exclusão Automática de Arquivos|Files In Project]
+C:\WINDOWS\system32\msvbvm60.dll=Yes
+D:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\OLEAUT32.DLL=Yes
+D:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\OLEPRO32.DLL=Yes
+D:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\ASYCFILT.DLL=Yes
+D:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\STDOLE2.TLB=Yes
+D:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\COMCAT.DLL=Yes
+C:\WINDOWS\system32\scrrun.dll=Yes
+C:\WINDOWS\system32\msvcrt.dll=Yes
+C:\WINDOWS\system32\ntsvc.ocx=No
+D:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP.EXE=Yes
+D:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP1.EXE=Yes
+C:\WINDOWS\system32\VB6STKIT.DLL=Yes
+D:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\ST6UNST.EXE=Yes
+C:\Documents and Settings\xrjsanto\Desktop\STA\Delete Service\ExclusaoArquivos.exe=Yes
+
+[Package|STA - Exclusão Automática de Arquivos|Configure Registry Files]
+Applicable=No
+
+[Package|STA - Exclusão Automática de Arquivos|Configure Remote Servers]
+Applicable=No
+
+[Package|STA - Exclusão Automática de Arquivos|Install Locations]
+C:\Documents and Settings\xrjsanto\Desktop\ExclusaoArquivos\ExclusaoArquivos.exe=$(AppPath)
+C:\WINDOWS\system32\msvbvm60.dll=$(WinSysPathSysFile)
+D:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\OLEAUT32.DLL=$(WinSysPathSysFile)
+D:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\OLEPRO32.DLL=$(WinSysPathSysFile)
+D:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\ASYCFILT.DLL=$(WinSysPathSysFile)
+D:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\STDOLE2.TLB=$(WinSysPathSysFile)
+D:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\COMCAT.DLL=$(WinSysPathSysFile)
+C:\WINDOWS\system32\msxml2.dll=$(WinSysPath)
+C:\WINDOWS\system32\scrrun.dll=$(WinSysPath)
+C:\WINDOWS\system32\msvcrt.dll=$(WinSysPathSysFile)
+C:\WINDOWS\system32\ntsvc.ocx=$(WinSysPath)
+D:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP.EXE=$(AppPath)
+D:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP1.EXE=$(WinPath)
+C:\WINDOWS\system32\VB6STKIT.DLL=$(WinSysPathSysFile)
+D:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\ST6UNST.EXE=$(WinPath)
+C:\Documents and Settings\xrjsanto\Desktop\STA\Delete Service\ExclusaoArquivos.exe=$(AppPath)
+
+[Package|STA - Exclusão Automática de Arquivos|Configure Shared Files]
+Applicable=Yes
+C:\Documents and Settings\xrjsanto\Desktop\ExclusaoArquivos\ExclusaoArquivos.exe=No
+C:\Documents and Settings\xrjsanto\Desktop\STA\Delete Service\ExclusaoArquivos.exe=No
+
+[Package|STA - Exclusão Automática de Arquivos|Distribution]
+Type=single
+Size=
+Title=STA - Exclusão Automática de Arquivos
+
+[Package|STA - Exclusão Automática de Arquivos|Package]
+PackageFolder=C:\Documents and Settings\xrjsanto\Desktop\ExclusaoArquivos\Package
+ProjectFolder=C:\Documents and Settings\xrjsanto\Desktop\STA\Delete Service
+ServerSideCab=
+File1=C:\Documents and Settings\xrjsanto\Desktop\ExclusaoArquivos\Package\setup.exe
+File2=C:\Documents and Settings\xrjsanto\Desktop\ExclusaoArquivos\Package\Setup.Lst
+File3=C:\Documents and Settings\xrjsanto\Desktop\ExclusaoArquivos\Package\ExclusaoArquivos.CAB
+Handler1=PDWizard.FolderDplySubWiz
+Handler2=PDWizard.WebPostDplySubWiz

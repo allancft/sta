@@ -1,0 +1,31 @@
+<PUBLIC:COMPONENT>
+<PUBLIC:PROPERTY name="mask"/>
+<SCRIPT src="../../../js/mascara.js"></SCRIPT>
+<SCRIPT src="../../../js/verifica_data.js"></SCRIPT>
+<SCRIPT src="../../../js/verdt.js"></SCRIPT>
+<SCRIPT>
+
+attachEvent("onblur", ch_ver_dt);
+attachEvent("onkeydown", ch_ver);
+attachEvent("onkeyup", ch_ver);
+
+function ucase()
+{
+	if(this.type != 'password' || this.type!='button' || this.type!='reset' || this.type!='submit' )
+
+		this.value = this.value.toUpperCase();
+}
+
+function ch_ver_dt()
+{
+	ver_dt(this);	
+	//ucase();
+}
+function ch_ver()
+{
+	mascara(this);
+	//ucase();
+}
+
+</SCRIPT>
+</PUBLIC:COMPONENT>
